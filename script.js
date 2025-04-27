@@ -1,5 +1,6 @@
 //your JS code here. If required.
 function validateAge(age){
+	
 	return new Promise((resolve,reject)=>{
 		 setTimeout(() => {
             if (age >= 18) {
@@ -14,6 +15,7 @@ function validateAge(age){
 
 const form = document.getElementById('ageForm');
 form.addEventListener('submit', function(event) {
+	event.preventDefault();
 	let age=document.getElementById('age').value;
 	let name=document.getElementById('name').value;
 	if(age ==="" || name===""){
